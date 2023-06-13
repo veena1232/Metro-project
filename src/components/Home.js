@@ -37,6 +37,26 @@ const Home = () => {
       </div>
     </div>
   </nav>
+
+  <div className="menu">
+            <div class="container">
+                <div class="row">
+                    <div calss="col-4">
+                        <div>
+                        <ul>
+                            <li><Link to="/sdistance">Shortest Route(Stations)</Link></li><br/><br/>
+                            <li><Link to="/stime">Shortest Route(Time)</Link></li><br/><br/>
+                            <li><Link to="/allpaths">All possible paths</Link></li><br/><br/>
+                            <li><Link to="/platforms">Platform Details</Link></li><br/><br/>
+                        </ul>
+        
+                        </div>                    
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
         
 
     
