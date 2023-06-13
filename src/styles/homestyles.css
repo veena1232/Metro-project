@@ -1,0 +1,43 @@
+#logo{
+    width: 10px;
+    height: 10px;
+}
+
+.header{
+    padding: 0;
+    display: flex;
+    background-image:linear-gradient(#0730fa,#0795fa) ;
+    font-size: 20px;
+
+    
+}
+
+.logo-title{
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    padding-top:30px;
+
+}
+
+ul li{
+    list-style-type: none;
+    padding-left: 100px;
+}
+
+ul li Link{
+    color: black;
+}
+
+#nav-item{
+    text-decoration: none;
+    color:white;
+
+}
+
+.nav ul{
+    display: flex;
+    margin-left: 400px;
+    margin-top: 15px;
+    justify-content: end;
+}
