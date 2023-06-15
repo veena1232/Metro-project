@@ -3,12 +3,25 @@ import logo from "./logo.jpg";
 import { graph } from './Data/Distance';
 import { cities } from './Data/Cities';
 import { useState, useEffect } from 'react';
+import "../styles/sdistancestyles.css";
+import { FaArrowDown } from 'react-icons/fa';
 
 const ShortDistance = () => {
   const [src, setSrc] = useState("Ameerpet");
   const [dest, setDest] = useState("Ameerpet");
   const [path, setPath] = useState([]);
 
+  const [pg, setPg] = useState("Parade Ground");
+  const [ap, setAp] = useState("Ameerpet");
+  const [mgbs, setMgbs] = useState("MG Bus Station");
+
+  const [r, setR] = useState(false);
+
+  const [ss, setSs] = useState(false);
+
+  const [blueLine, setBlueLine] = useState(["Raydurg", "Hitech City", "Durgam Cheruvu", "Madhapur", "Peddamma Gudi", "Jubilee Hills Checkpost", "Rd no.5 Jubliee Hills","Yusufguda","Madhuranagar","Begumpet","Prakash Nagar","Rasoolpura ", "Paradise","Secunderabad East", "Mettuguda", "Tarnaka", "Habsiguda", "NGRI", " Stadium", "Uppal", "Nagole"]);
+  const [redLine, setRedLine] = useState(["JNTU College", "KPHB Colony", "Kukatpally", "Dr B.R. Ambedkar Balanagar", "Musapet", "Bharatnagar", "Erragadda", "ESI Hospital", "SR Nagar", "Punjagutta", "Irrum Manjil", "Khairatabad", "Lakdi-ka-pul","Assembly", "Gandhi Bhavan", "Osmania Medical College", "Malakpet", "New Market", "Musarambagh", "Dilsukhnagar", "Chaitanyapuri", "Victoria Mahal", "LB Nagar"]);
+  const [greenLine, setGreenLine] = useState(["Secunderabad West", "Gandhi Hospital", "Musheerabad", "RTC X Roads", "Chikkadapally", "Narayanguda", "Sultan Bazar"])
  
 
     function dijkstra(graph, src, dest) {
@@ -67,10 +80,10 @@ const ShortDistance = () => {
 
       function printData(path){
         // document.write("Distance from "+cities[src] +" to ");
-        
+        setPath([]);
         //document.getElementById("output").innerHTML = "Shortest route from "+cities[src]+" to "+cities[dest]+" is : " ;
         
-        for(let i=0;i<path.length-1;i++){
+        for(let i=0;i<path.length;i++){
           setPath(prevPath => [...prevPath, cities[path[i]]]);
         }
         console.log(path)
@@ -82,10 +95,13 @@ const ShortDistance = () => {
                       
       
       const dijkstraAlgo=()=>{
-        console.log("s= "+src);
+        
         if(src==dest){
-          document.write("Source and Destination can't be same");
+          setSs(true);
+          return;
         }
+        setSs(false)
+        setR(true);
         dijkstra(graph, cities.indexOf(src), cities.indexOf(dest));
       }
       
@@ -98,17 +114,44 @@ const ShortDistance = () => {
 
   return (
     <div className="main-div">
-    <div className="header">
-    <img src={logo} id="logo"/>
-    <p id="logo-title">YOURS METRO</p>
-
-    <div className="nav">  
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">HydMetro</a>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">
+        <img src={logo} className="food-munch-logo" alt="Logo" />
+      </a>
+      <h3 id="title">Go Metro, Explore Extra</h3>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="nav-menu">
+          <div className="navbar-nav ml-auto">
+            <a className="nav-link active" id="navItem1" href="/about">
+              About
+              <span className="sr-only">(current)</span>
+            </a>
+            <a className="nav-link" href="contact" id="navItem2">
+              Contact
+            </a>
+            <a className="nav-link" href="services" id="navItem3">
+              Services
+            </a>
+            <a className="nav-link" href="followus" id="navItem4">
+              Follow Us
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </nav>
   <div className="first-div">
     <p className="title">Get the shortest path here, to reach your destination</p>
   <div className="start">
@@ -172,11 +215,11 @@ const ShortDistance = () => {
     <option>Victoria Mahal</option>
     <option>Yusufguda</option>
   </select>
-  <div className="icon-container-1">
-    <i className="fa-solid fa-caret-down"></i>
   </div>
   
+  <div className='end'>
   <p id="to">To :</p>
+  <div id="to-id">
   <select id="dest" onChange={e=>{setDest(e.target.value)}}>
     <option>Ameerpet</option>
     <option>Assembly</option>
@@ -236,32 +279,84 @@ const ShortDistance = () => {
     <option>Victoria Mahal</option>
     <option>Yusufguda</option>
     </select>
-        <div className="icon-container-2">
-            <i className="fa-solid fa-caret-down"></i>
-        </div>
-        
-        </div>
-        
-        </div>
+    </div>
+    </div>
+  </div>
         <button onClick={dijkstraAlgo} className="sub">Get shortest path</button>
 
   
         <br/><br/><br/>
         {path.length > 0 ? (
-          <div>
-            <h3>Path:</h3>
+          <div className='output'>
+            <h3></h3>
             <ul>
-              {path.map((value, index) => (
-                <li key={index}>{value}</li>
-              ))}
+            {path.map((value, index) => {
+              if (value === pg) {
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="pg-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-pg"/>
+                  </div>
+                );
+              } else if (value === ap) {
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="ap-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-ap"/>
+                  </div>
+                );
+              } else if (value === mgbs) {
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="mgbs-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-mbs"/>
+                  </div>
+                );
+              } else if(blueLine.includes(value)){
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="b-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-blue"/>
+                  </div>
+                );
+              } else if(redLine.includes(value)){
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="r-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-red"/>
+                  </div>
+                );
+              } else if(greenLine.includes(value)){
+                return (
+                  <div key={index}>
+                    <li>
+                      <h4 id="g-item" className='value-item'>{value}</h4>
+                    </li>
+                    <FaArrowDown className="arrow-icon-green"/>
+                  </div>
+                );
+              }
+            })}
             </ul>
           </div>
         ) : (
-          <p></p>
+          <p> </p>
         )}
-        <h3 id="output">OUTPUT</h3>
-        <h3 id="op"></h3>
-        <h3 id="op2"></h3>
+
+        {r?<h3 className='final-dest'>Destination</h3>:<p></p>}
+
+        {ss?<h3 className='same-station-msg'>Source and Destination can't be same</h3>:<p></p>}
+        
     </div>
   )
 }

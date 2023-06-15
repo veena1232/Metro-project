@@ -41,3 +41,77 @@ ul li Link{
     margin-top: 15px;
     justify-content: end;
 }
+
+.food-munch-logo {
+    width: 50px;
+    height: 50px;
+}
+
+#navItem1 , #navItem2, #navItem3, #navItem4 {
+    color: white;
+    margin-left: 30px;
+}
+
+#navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover{
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 40px;
+}
+
+#navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
+    background-color: #4951b5;
+    border-radius: 40px;
+}
+
+.container-fluid{
+    margin: 10px;
+    background-color: rgba(8, 112, 19, 0.735);
+    color: antiquewhite;
+}
+
+a{
+    color:antiquewhite;
+}
+#title{
+    margin-top: 20px;
+}
+
+.nav-menu{
+    margin-left: 550px;
+}
+
+.card{
+    height: 300px;
+    width: 500px;
+}
+
+.menu {
+    margin-top: 150px;
+  }
+  
+ #btn1, #btn2, #btn3, #btn4{
+    border: 2px solid wheat;
+    height: 60px;
+    width: 300px;
+    margin: 0px 41px;
+    background-color: #0081AB
+    ;
+    color:antiquewhite;
+    font-size: larger;
+    border-radius: 40px;
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover{
+    height: 70px;
+    width: 310px;
+    margin: 0px 41px;
+    background-color: #DA2C43    ;
+    color:antiquewhite;
+    font-size: larger;
+    border-radius: 40px;
+    transition-duration: 0.4s;
+    box-shadow: 0px 6px 6px 0#0081AB
+    , 0 5px 5px 0 #0081AB
+    ;
+ }
