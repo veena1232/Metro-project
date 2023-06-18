@@ -1,0 +1,18 @@
+.signup-div{
+    margin-left: 550px;
+    margin-right: 100px;
+    margin-top: 70px;
+    width: 450px;
+    height: 530px;
+    padding: 10px;
+    border: 5px solid rgb(221, 156, 156);
+}
+
+.form{
+    margin-top: 50px;
+}
+
+.clickheresignup{
+    margin-top: 20px;
+    margin-left: 170px;
+}

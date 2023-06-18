@@ -4,6 +4,10 @@ import { graph } from './Data/Distance';
 import { cities } from './Data/Cities';
 import { times } from './Data/Times';
 import { useState, useEffect } from 'react';
+import logo2 from "../components/Images/logo2.png"
+import "../styles/platformstyles.css";
+
+
 
 const PlatformDetails = () => {
 
@@ -54,7 +58,46 @@ const PlatformDetails = () => {
 
 
   return (
-    <div>
+    <div className='main-div'>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">
+        <img src={logo2} className="food-munch-logo" alt="Logo" />
+      </a>
+      <h3 id="title">Go Metro, Explore Extra</h3>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="nav-menu">
+          <div className="navbar-nav ml-auto">
+            <a className="nav-link active" id="navItem1" href="#wcuSection">
+              About
+              <span className="sr-only">(current)</span>
+            </a>
+            <a className="nav-link" href="#exploreMenuSection" id="navItem2">
+              Contact
+            </a>
+            <a className="nav-link" href="#deliveryPaymentSection" id="navItem3">
+              Services
+            </a>
+            <a className="nav-link" href="#followUsSection" id="navItem4">
+              Follow Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div className='select'>
     <select id="src" onChange={e=>setSrc(e.target.value)}>
         <option>Ameerpet</option>
         <option>Assembly</option>
@@ -120,6 +163,7 @@ const PlatformDetails = () => {
       
       <br/><br/><br/>
       <button onClick={getPF}>GETPF</button>
+    </div>
     </div>
   )
 }

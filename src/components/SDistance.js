@@ -5,6 +5,8 @@ import { cities } from './Data/Cities';
 import { useState, useEffect } from 'react';
 import "../styles/sdistancestyles.css";
 import { FaArrowDown } from 'react-icons/fa';
+import logo2 from "../components/Images/logo2.png"
+
 
 const ShortDistance = () => {
   const [src, setSrc] = useState("Ameerpet");
@@ -117,7 +119,7 @@ const ShortDistance = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div className="container-fluid">
       <a className="navbar-brand" href="/">
-        <img src={logo} className="food-munch-logo" alt="Logo" />
+        <img src={logo2} className="food-munch-logo" alt="Logo" />
       </a>
       <h3 id="title">Go Metro, Explore Extra</h3>
       <button
@@ -156,7 +158,7 @@ const ShortDistance = () => {
     <p className="title">Get the shortest path here, to reach your destination</p>
   <div className="start">
   <p id="from">From :</p>
-  <select id="src" onChange={e=>setSrc(e.target.value)}>
+  <select id="src" className='' onChange={e=>setSrc(e.target.value)}>
     <option>Ameerpet</option>
     <option>Assembly</option>
     <option>Begumpet</option>
@@ -315,7 +317,7 @@ const ShortDistance = () => {
                     <li>
                       <h4 id="mgbs-item" className='value-item'>{value}</h4>
                     </li>
-                    <FaArrowDown className="arrow-icon-mbs"/>
+                    <FaArrowDown className="arrow-icon-mgbs"/>
                   </div>
                 );
               } else if(blueLine.includes(value)){
@@ -356,8 +358,7 @@ const ShortDistance = () => {
         {r?<h3 className='final-dest'>Destination</h3>:<p></p>}
 
         {ss?<h3 className='same-station-msg'>Source and Destination can't be same</h3>:<p></p>}
-        
-    </div>
+        </div>
   )
 }
 

@@ -5,6 +5,8 @@ import AllPaths from "./AllPaths";
 import PlatformDetails from "./PlatformDetails";
 import ShortDistance from './SDistance';
 import Home from './Home';
+import Login from './Login';
+import Signup from './Signup';
 
 const Main = () => {
   return (
@@ -15,6 +17,8 @@ const Main = () => {
             <Route path="/sdistance" element={<ShortDistance/>}></Route>
             <Route path="/allpaths" element={<AllPaths/>}></Route>
             <Route path="/platforms" element={<PlatformDetails/>}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+            <Route path='/signup' element={<Signup/>}></Route>
         </Routes>
     </BrowserRouter>
   )

@@ -43,11 +43,11 @@ ul li Link{
 }
 
 .food-munch-logo {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 
-#navItem1 , #navItem2, #navItem3, #navItem4 {
+#navItem1 , #navItem2, #navItem3, #navItem4, #navItem5 {
     color: white;
     margin-left: 30px;
 }
@@ -77,7 +77,7 @@ a{
 }
 
 .nav-menu{
-    margin-left: 550px;
+    margin-left: 400px;
 }
 
 .card{
@@ -88,14 +88,18 @@ a{
 .menu {
     margin-top: 150px;
   }
+.main-nav{
+    background-color: white;
+}
+ 
   
  #btn1, #btn2, #btn3, #btn4{
     border: 2px solid wheat;
     height: 60px;
     width: 300px;
+    margin-left: 40px;
     margin: 0px 41px;
-    background-color: #0081AB
-    ;
+    background-color: #0081AB;
     color:antiquewhite;
     font-size: larger;
     border-radius: 40px;
@@ -114,4 +118,49 @@ a{
     box-shadow: 0px 6px 6px 0#0081AB
     , 0 5px 5px 0 #0081AB
     ;
+ }
+
+ .logout-btn{
+    margin-top: 3px;
+    width: 70px;
+    height: 35px;
+    background-color: #0081AB;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 17px;
+    padding:5px;
+    margin-top: 14px;
+ }
+
+ .logout-btn:hover{
+    background-color: #DA2C43;
+ }
+
+ .login-btn{
+    margin-top: 3px;
+    width: 70px;
+    height: 35px;
+    background-color: #0081AB;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 17px;
+    padding:5px;
+    margin-left: 135px;
+ }
+
+ .login-btn:hover{
+    background-color: #DA2C43;
+ }
+
+ .username{
+    margin-right: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+ }
+
+ .log-div{
+    display: flex;
+    margin-left: 105px;
  }

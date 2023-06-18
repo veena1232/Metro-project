@@ -5,6 +5,8 @@
   import { times } from './Data/Times';
   import { useState, useEffect } from 'react';
   import { FaArrowDown } from 'react-icons/fa';
+  import logo2 from "../components/Images/logo2.png"
+
 
   const AllPaths = () => {
     const [src, setSrc] = useState("Ameerpet");
@@ -84,7 +86,7 @@
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          <img src={logo} className="food-munch-logo" alt="Logo" />
+          <img src={logo2} className="food-munch-logo" alt="Logo" />
         </a>
         <h3 id="title">Go Metro, Explore Extra</h3>
         <button

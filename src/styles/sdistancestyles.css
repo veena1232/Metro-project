@@ -15,12 +15,13 @@
 .start{
     display: flex;
     margin-top: 50px;
-    margin-left: 36.3%;
+   justify-content: center;
 }
 
 .end{
     display: flex;
     margin-top: 30px;
+    justify-content: center;
 }
 
 #to-id{
@@ -36,14 +37,14 @@
     margin-right: 20px;
 }
 #to{
-    margin-left: 36.5%;
 }
 
 .sub{
     border: 2px solid wheat;
     height: 40px;
     width: 250px;
-    margin: 30px 41px;
+    margin-top: 27px;
+    margin-left: 43%;
     background-color: #0081AB;
     color:antiquewhite;
     font-size: larger;
@@ -54,7 +55,6 @@
  .sub:hover{
     height: 50px;
     width: 260px;
-    margin: 30px 41px;
     background-color: #DA2C43    ;
     color:antiquewhite;
     font-size: larger;
@@ -118,20 +118,24 @@
 
  .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
     color: rgb(11, 10, 10); 
+    margin-left: 50%;
   }
 
   .arrow-icon-blue{
     color: blue;
+    margin-left: 50%;
   }
   .arrow-icon-red{
     color: red;
+    margin-left: 50%;
   }
   .arrow-icon-green{
     color: green;
+    margin-left: 50%;
   }
 
   .value-item{
-    margin-left: 40%;
+    margin-left: 41%;
   }
   
   .final-dest{
@@ -146,4 +150,5 @@
     color: #DA2C43;
     font-size: 20px;
     font-weight: bold;
+    margin-left: 36%;
   }
