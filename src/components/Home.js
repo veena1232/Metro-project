@@ -56,7 +56,7 @@ const Home = () => {
             <div className="log-div">
             {user && <p className="username">{user.username}</p>}
             {user && <a href="/"><button onClick={handleLogout} className="logout-btn">Logout</button></a>}
-            {!user && <a href="/login"><button className="login-btn" onClick={handleLogin}>Login</button></a>}
+            {!user && <a href="/login"><button className="login-btn">Login</button></a>}
             </div>
           </div>
         </div>
