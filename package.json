@@ -1,5 +1,6 @@
 {
   "name": "pridemetro",
+  "proxy":"https://fantastic-elk-handkerchief.cyclic.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
