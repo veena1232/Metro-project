@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../styles/signupstyles.css";
 import { FaUserCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -33,8 +35,17 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/signup', data);
-      console.log(response.data);
+      const response = await axios.post('https://fantastic-elk-handkerchief.cyclic.app/signup', data);
+      const { status, firstname } = response.data;
+      const userData = {
+        username: firstname,
+        stat: true,
+      };
+      if(status == "loginSuccess"){
+        navigate("/", { state: userData });
+        console.log("ok")
+        
+      }
     } catch (error) {
       console.error('Error:', error);
     }

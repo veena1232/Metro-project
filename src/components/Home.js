@@ -2,24 +2,13 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.jpg";
 import { Outlet, Link } from "react-router-dom";
 import "../styles/homestyles.css";
-import card1 from "../components/Images/card1.jpg";
-import card2 from "../components/Images/card2.jpg";
-import card3 from "../components/Images/card3.jpg";
-import card4 from "../components/Images/card4.jpg";
 import logo2 from "../components/Images/logo2.png";
 import { useLocation, useNavigate } from 'react-router-dom';
-
-var a = true;
-var b = false;
 
 const Home = () => {
   const history = useNavigate();
   const location = useLocation();
   const [user, setUser] = useState(location.state);
-
-  const handleLogin=()=>{
-    
-  }
 
   const handleLogout=()=>{
     history("/login");

@@ -12,7 +12,8 @@ const Login = () => {
     password: ''
   });
 
-  const [isLog, setIsLog] = useState(false);
+  const [unf, setUnf] = useState(false);
+  const [ip, setip] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -27,7 +28,13 @@ const Login = () => {
     const { email, password } = formData;
 
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://fantastic-elk-handkerchief.cyclic.app/login', { email, password });
+      if(response.data=="userNotFound"){
+        setUnf(true);
+      }
+      else if(response.data == "invalidPassword"){
+        setip(true);
+      }
       const { status, firstname } = response.data;
       const userData = {
         username: firstname,
@@ -39,11 +46,14 @@ const Login = () => {
         
       }
     } catch (error) {
-      console.error(error);
+      console.error("err:"+error);
     }
   };
 
   return (
+    <div>
+    {unf&&<h3>We're unable to find your account!</h3>}
+    {ip&&<h3>Passwords not matched!</h3>}
     <div className='log-main-div'>
     <FaUserCircle className='user-logo'/>
     <div className='log-d'>
@@ -62,6 +72,7 @@ const Login = () => {
       <button className='log-sub' type="submit">Login</button>
       
     </form>
+    </div>
     </div>
     </div>
   );
