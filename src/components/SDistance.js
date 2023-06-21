@@ -17,12 +17,10 @@ const ShortDistance = () => {
   const [ap, setAp] = useState("Ameerpet");
   const [mgbs, setMgbs] = useState("MG Bus Station");
 
-  const [r, setR] = useState(false);
-
   const [ss, setSs] = useState(false);
 
   const [blueLine, setBlueLine] = useState(["Raydurg", "Hitech City", "Durgam Cheruvu", "Madhapur", "Peddamma Gudi", "Jubilee Hills Checkpost", "Rd no.5 Jubliee Hills","Yusufguda","Madhuranagar","Begumpet","Prakash Nagar","Rasoolpura ", "Paradise","Secunderabad East", "Mettuguda", "Tarnaka", "Habsiguda", "NGRI", " Stadium", "Uppal", "Nagole"]);
-  const [redLine, setRedLine] = useState(["JNTU College", "KPHB Colony", "Kukatpally", "Dr B.R. Ambedkar Balanagar", "Musapet", "Bharatnagar", "Erragadda", "ESI Hospital", "SR Nagar", "Punjagutta", "Irrum Manjil", "Khairatabad", "Lakdi-ka-pul","Assembly", "Gandhi Bhavan", "Osmania Medical College", "Malakpet", "New Market", "Musarambagh", "Dilsukhnagar", "Chaitanyapuri", "Victoria Mahal", "LB Nagar"]);
+  const [redLine, setRedLine] = useState(["JNTU College", "KPHB Colony", "Kukatpally", "Dr B.R. Ambedkar Balanagar", "Musapet", "Bharatnagar", "Erragadda", "ESI Hospital", "SR Nagar", "Punjagutta", "Irrum Manjil", "Khairatabad", "Lakdi-ka-pul","Assembly", "Gandhi Bhavan", "Osmania Medical College", "Malakpet", "New Market", "Musarambagh", "Dilsukhnagar", "Chaitanyapuri", "Victoria Mahal", "LB Nagar", "Miyapur"]);
   const [greenLine, setGreenLine] = useState(["Secunderabad West", "Gandhi Hospital", "Musheerabad", "RTC X Roads", "Chikkadapally", "Narayanguda", "Sultan Bazar"])
  
 
@@ -103,7 +101,6 @@ const ShortDistance = () => {
           return;
         }
         setSs(false)
-        setR(true);
         dijkstra(graph, cities.indexOf(src), cities.indexOf(dest));
       }
       
@@ -296,55 +293,79 @@ const ShortDistance = () => {
               if (value === pg) {
                 return (
                   <div key={index}>
+                    {index==0 && blueLine.includes(path[index+1]) &&<p className='pg-blue'>[Get into blue line]</p>}
+                    {index==0 && greenLine.includes(path[index+1]) &&<p className='pg-green'>[Get into green line]</p>}
                     <li>
-                      <h4 id="pg-item" className='value-item'>{value}</h4>
+                      <p id="pg-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-pg"/>
+                    {blueLine.includes(path[index-1]) && greenLine.includes(path[index+1]) &&
+                       <p className='pg-green'>[Change here for green line]</p>}
+                    {blueLine.includes(path[index+1]) && greenLine.includes(path[index-1]) &&
+                        <p className='pg-blue'>[Change here for blue line]</p>}
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-pg"/>}
+                    
                   </div>
                 );
               } else if (value === ap) {
                 return (
                   <div key={index}>
+                    {index==0 && blueLine.includes(path[index+1]) &&<p className='ap-blue'>[Get into blue line]</p>}
+                    {index==0 && redLine.includes(path[index+1]) &&<p className='ap-red'>[Get into red line]</p>}
                     <li>
-                      <h4 id="ap-item" className='value-item'>{value}</h4>
+                      <p id="ap-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-ap"/>
+                    {blueLine.includes(path[index-1]) && redLine.includes(path[index+1]) &&
+                      <p className='ap-red'>[Change here for red line]</p>}
+                    {blueLine.includes(path[index+1]) && redLine.includes(path[index-1]) &&
+                        <p className='ap-blue'>[Change here for blue line]</p>}
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-ap"/>}
+                    
                   </div>
                 );
               } else if (value === mgbs) {
                 return (
                   <div key={index}>
+                    {index==0 && redLine.includes(path[index+1]) &&<p className='mgbs-red'>[Get into red line]</p>}
+                    {index==0 && greenLine.includes(path[index+1]) &&<p className='mgbs-green'>[Get into green line]</p>}
                     <li>
-                      <h4 id="mgbs-item" className='value-item'>{value}</h4>
+                      <p id="mgbs-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-mgbs"/>
+                    {greenLine.includes(path[index-1]) && redLine.includes(path[index+1]) &&
+                      <p className='mgbs-red'>[Change here for red line]</p>}
+                    {greenLine.includes(path[index+1]) && redLine.includes(path[index-1]) &&
+                        <p className='mgbs-green'>[Change here for green line]</p>}
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-mgbs"/>}
+                    
                   </div>
                 );
               } else if(blueLine.includes(value)){
                 return (
                   <div key={index}>
+                  {index==0 &&<p className='pg-blue'>[Get into blue line]</p>}
                     <li>
-                      <h4 id="b-item" className='value-item'>{value}</h4>
+                      <p id="b-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-blue"/>
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-blue"/>}
                   </div>
                 );
               } else if(redLine.includes(value)){
                 return (
                   <div key={index}>
+                  {index==0 &&<p className='ap-red'>[Get into red line]</p>}
                     <li>
-                      <h4 id="r-item" className='value-item'>{value}</h4>
+                      <p id="r-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-red"/>
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-red"/>}
                   </div>
                 );
               } else if(greenLine.includes(value)){
                 return (
                   <div key={index}>
+                  {index==0 &&<p className='pg-green'>[Get into green line]</p>}
                     <li>
-                      <h4 id="g-item" className='value-item'>{value}</h4>
+                      <p id="g-item" className='value-item'>{value}</p>
                     </li>
-                    <FaArrowDown className="arrow-icon-green"/>
+                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-green"/>}
                   </div>
                 );
               }
@@ -354,9 +375,6 @@ const ShortDistance = () => {
         ) : (
           <p> </p>
         )}
-
-        {r?<h3 className='final-dest'>Destination</h3>:<p></p>}
-
         {ss?<h3 className='same-station-msg'>Source and Destination can't be same</h3>:<p></p>}
         </div>
   )

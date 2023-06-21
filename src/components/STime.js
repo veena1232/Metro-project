@@ -5,9 +5,7 @@ import { cities } from './Data/Cities';
 import { times } from './Data/Times';
 import { useState, useEffect } from 'react';
 import "../styles/stimestyles.css";
-import logo2 from "../components/Images/logo2.png"
-
-
+import logo2 from "../components/Images/logo2.png";
 
 const STime = () => {
   const [src, setSrc] = useState("Ameerpet");

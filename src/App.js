@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import { useState } from 'react';
 import Counter from './components/Counter';
+import Timer from './components/Timer';
 
 function App() {
   return (

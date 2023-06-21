@@ -94,11 +94,11 @@ a{
  
   
  #btn1, #btn2, #btn3, #btn4{
+    align-items: center;
     border: 2px solid wheat;
-    height: 60px;
+    height: 50px;
     width: 300px;
-    margin-left: 40px;
-    margin: 0px 41px;
+    margin: 0px 21px;
     background-color: #0081AB;
     color:antiquewhite;
     font-size: larger;
@@ -107,14 +107,13 @@ a{
  }
 
  #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover{
-    height: 70px;
-    width: 310px;
-    margin: 0px 41px;
+    height: 53px;
+    width: 303px;
     background-color: #DA2C43    ;
     color:antiquewhite;
     font-size: larger;
     border-radius: 40px;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
     box-shadow: 0px 6px 6px 0#0081AB
     , 0 5px 5px 0 #0081AB
     ;
@@ -164,3 +163,36 @@ a{
     display: flex;
     margin-left: 105px;
  }
+
+ .main-footer-div{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 218px;
+    margin-top: 279px;
+    background-color: rgba(8, 112, 19, 0.735);
+ }
+ 
+ .contact-head{
+    padding-top: 20px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    color: white;
+ }
+
+ .icon-1, .icon-2, .icon-3,.icon-4{
+    width: 25px;
+    color: whitesmoke;
+    height: 35px;
+    margin: 20px;
+ }
+
+.cr-div{
+    color: whitesmoke;
+}
+
+hr{
+    display: block;
+    color: white;
+}

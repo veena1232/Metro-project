@@ -53,60 +53,66 @@
  }
 
  .sub:hover{
-    height: 50px;
-    width: 260px;
+    height: 45px;
+    width: 253px;
     background-color: #DA2C43    ;
     color:antiquewhite;
     font-size: larger;
     border-radius: 40px;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     box-shadow: 0px 6px 6px 0#0081AB
     , 0 5px 5px 0 #0081AB
     ;
  }
 
  #g-item{
-    padding: 10px;
-    background-color: green;
-    color: white;
-    font-weight: 10px;
+   padding-left: 35px;
+    color: green;
+    border: 2px solid green;
     width: 180px;
     border-radius: 30px;
  }
  #r-item{
-    padding: 10px;
-    background-color: red;
-    color: white;
-    font-weight: 10px;
+   padding-left: 35px;
+    align-items: center;
+    justify-content: center;
+    color: red;
     width: 180px;
+    font-size: 17px;
+    border: 2px solid red;
     border-radius: 30px;
  }
  #b-item{
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    font-weight: bold;
+   padding-left: 35px;
+    color: blue;
+    border: 2px solid blue;
     width: 180px;
     border-radius: 30px;
  }
 
  #pg-item{
-    padding: 20px;
-    color: white;
+   padding-left: 35px;
+   padding-top: 7px;
+   color: white;
+   height: 35px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
  }
  #mgbs-item{
-    padding: 20px;
+   padding-left: 35px;
+   padding-top: 7px;
     color: white;
+    height: 35px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
  }
  #ap-item{
-    padding: 20px;
-    color: white;
+   padding-left: 45px;
+   padding-top: 7px;
+   color: white;
+   height: 35px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
@@ -151,4 +157,28 @@
     font-size: 20px;
     font-weight: bold;
     margin-left: 36%;
+  }
+
+  .pg-green, .pg-blue, .ap-blue, .ap-red, .mgbs-green, .mgbs-red{
+   margin-left: 45%;
+   font-size: 17px;
+  }
+
+  .pg-green{
+   color: green;
+  }
+  .pg-blue{
+   color: blue;
+  }
+  .ap-red{
+   color: red;
+  }
+  .ap-blue{
+   color: blue;
+  }
+  .mgbs-green{
+   color: green;
+  }
+  .mgbs-red{
+   color: red;
   }

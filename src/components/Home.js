@@ -4,6 +4,10 @@ import { Outlet, Link } from "react-router-dom";
 import "../styles/homestyles.css";
 import logo2 from "../components/Images/logo2.png";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter} from "react-icons/fa";
+import { FaYoutube} from "react-icons/fa";
 
 const Home = () => {
   const history = useNavigate();
@@ -99,6 +103,33 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="main-footer-div">
+      <div className="footer-div">
+          <center className="icons-head">
+            <div className="contact-title">
+              <h4 className="contact-head">Follow Us</h4>
+            </div>
+            <div className="contact-icons">
+              <FaFacebook className="icon-1"/>
+              <FaInstagram className="icon-2"/>
+              <FaTwitter className="icon-3"/>
+              <FaYoutube className="icon-4"/>
+            </div>
+          </center>
+
+
+      </div>
+
+      <hr></hr>
+      <div className="cr-div">
+        <center>
+        <p>&#169;2023 OurMetro.LLC, All Rights Reserved</p>
+        </center>
+      </div>
+
+      </div>
+
   </div>
   );
 };

@@ -35,7 +35,7 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post('https://fantastic-elk-handkerchief.cyclic.app/signup', data);
+      const response = await axios.post('http://localhost:5000/signup', data);
       const { status, firstname } = response.data;
       const userData = {
         username: firstname,

@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import Home from './Home';
 import "../styles/loginstyles.css";
 import { useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
@@ -28,7 +27,7 @@ const Login = () => {
     const { email, password } = formData;
 
     try {
-      const response = await axios.post('https://fantastic-elk-handkerchief.cyclic.app/login', { email, password });
+      const response = await axios.post('http://localhost:5000/login', { email, password });
       if(response.data=="userNotFound"){
         setUnf(true);
       }
