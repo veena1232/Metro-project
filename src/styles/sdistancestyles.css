@@ -2,6 +2,15 @@
     margin-top: 140px;
 }
 
+@media (max-width:640px){
+  .first-div{
+    margin-top: 300px;
+  }
+  .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
+    margin-left: 40px;
+  }
+}
+
 #src, #dest{
     color: blue;
     padding: 10px;
@@ -44,7 +53,6 @@
     height: 40px;
     width: 250px;
     margin-top: 27px;
-    margin-left: 43%;
     background-color: #0081AB;
     color:antiquewhite;
     font-size: larger;
@@ -66,14 +74,12 @@
  }
 
  #g-item{
-   padding-left: 35px;
     color: green;
     border: 2px solid green;
     width: 180px;
     border-radius: 30px;
  }
  #r-item{
-   padding-left: 35px;
     align-items: center;
     justify-content: center;
     color: red;
@@ -83,7 +89,6 @@
     border-radius: 30px;
  }
  #b-item{
-   padding-left: 35px;
     color: blue;
     border: 2px solid blue;
     width: 180px;
@@ -91,7 +96,6 @@
  }
 
  #pg-item{
-   padding-left: 35px;
    padding-top: 7px;
    color: white;
    height: 35px;
@@ -100,7 +104,6 @@
     border-radius: 30px;
  }
  #mgbs-item{
-   padding-left: 35px;
    padding-top: 7px;
     color: white;
     height: 35px;
@@ -109,7 +112,6 @@
     border-radius: 30px;
  }
  #ap-item{
-   padding-left: 45px;
    padding-top: 7px;
    color: white;
    height: 35px;
@@ -124,44 +126,31 @@
 
  .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
     color: rgb(11, 10, 10); 
-    margin-left: 50%;
+    margin-left: 80px;
   }
 
   .arrow-icon-blue{
     color: blue;
-    margin-left: 50%;
+    margin-left: 80px;
   }
   .arrow-icon-red{
     color: red;
-    margin-left: 50%;
+    margin-left: 80px;
   }
   .arrow-icon-green{
     color: green;
-    margin-left: 50%;
-  }
-
-  .value-item{
-    margin-left: 41%;
-  }
-  
-  .final-dest{
-    padding: 12px;
-    border: 4px solid #FF4681;
-    width: 180px;
-    border-radius: 30px;
-    margin-left: 44.1%;
+    margin-left: 80px;
   }
 
   .title{
     color: #DA2C43;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 36%;
   }
 
   .pg-green, .pg-blue, .ap-blue, .ap-red, .mgbs-green, .mgbs-red{
-   margin-left: 45%;
    font-size: 17px;
+   margin-left: 80px;
   }
 
   .pg-green{
@@ -181,4 +170,7 @@
   }
   .mgbs-red{
    color: red;
+  }
+  .sdc{
+    color: green;
   }

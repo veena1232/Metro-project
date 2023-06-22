@@ -152,7 +152,7 @@ const ShortDistance = () => {
     </div>
   </nav>
   <div className="first-div">
-    <p className="title">Get the shortest path here, to reach your destination</p>
+    <center><p className="title">Get the shortest path here, to reach your destination</p></center>
   <div className="start">
   <p id="from">From :</p>
   <select id="src" className='' onChange={e=>setSrc(e.target.value)}>
@@ -281,20 +281,22 @@ const ShortDistance = () => {
     </div>
     </div>
   </div>
-        <button onClick={dijkstraAlgo} className="sub">Get shortest path</button>
+        <center><button onClick={dijkstraAlgo} className="sub">Get shortest path</button></center>
 
   
         <br/><br/><br/>
         {path.length > 0 ? (
-          <div className='output'>
+          <center className='output'>
             <h3></h3>
             <ul>
             {path.map((value, index) => {
               if (value === pg) {
                 return (
                   <div key={index}>
+                    <center>
                     {index==0 && blueLine.includes(path[index+1]) &&<p className='pg-blue'>[Get into blue line]</p>}
                     {index==0 && greenLine.includes(path[index+1]) &&<p className='pg-green'>[Get into green line]</p>}
+                    
                     <li>
                       <p id="pg-item" className='value-item'>{value}</p>
                     </li>
@@ -302,15 +304,17 @@ const ShortDistance = () => {
                        <p className='pg-green'>[Change here for green line]</p>}
                     {blueLine.includes(path[index+1]) && greenLine.includes(path[index-1]) &&
                         <p className='pg-blue'>[Change here for blue line]</p>}
-                    {index!==path.length-1 &&<FaArrowDown className="arrow-icon-pg"/>}
-                    
+                    {index!==path.length-1 &&<center><FaArrowDown className="arrow-icon-pg"/></center>}
+                    </center>
                   </div>
                 );
               } else if (value === ap) {
                 return (
                   <div key={index}>
+                  <center>
                     {index==0 && blueLine.includes(path[index+1]) &&<p className='ap-blue'>[Get into blue line]</p>}
                     {index==0 && redLine.includes(path[index+1]) &&<p className='ap-red'>[Get into red line]</p>}
+                    
                     <li>
                       <p id="ap-item" className='value-item'>{value}</p>
                     </li>
@@ -319,14 +323,16 @@ const ShortDistance = () => {
                     {blueLine.includes(path[index+1]) && redLine.includes(path[index-1]) &&
                         <p className='ap-blue'>[Change here for blue line]</p>}
                     {index!==path.length-1 &&<FaArrowDown className="arrow-icon-ap"/>}
-                    
+                    </center>
                   </div>
                 );
               } else if (value === mgbs) {
                 return (
                   <div key={index}>
+                  <center>
                     {index==0 && redLine.includes(path[index+1]) &&<p className='mgbs-red'>[Get into red line]</p>}
                     {index==0 && greenLine.includes(path[index+1]) &&<p className='mgbs-green'>[Get into green line]</p>}
+                   
                     <li>
                       <p id="mgbs-item" className='value-item'>{value}</p>
                     </li>
@@ -335,7 +341,7 @@ const ShortDistance = () => {
                     {greenLine.includes(path[index+1]) && redLine.includes(path[index-1]) &&
                         <p className='mgbs-green'>[Change here for green line]</p>}
                     {index!==path.length-1 &&<FaArrowDown className="arrow-icon-mgbs"/>}
-                    
+                    </center>
                   </div>
                 );
               } else if(blueLine.includes(value)){
@@ -371,11 +377,11 @@ const ShortDistance = () => {
               }
             })}
             </ul>
-          </div>
+          </center>
         ) : (
           <p> </p>
         )}
-        {ss?<h3 className='same-station-msg'>Source and Destination can't be same</h3>:<p></p>}
+        {ss?<center><h3 className="sdc">Source and Destination can't be same</h3></center>:<p></p>}
         </div>
   )
 }
