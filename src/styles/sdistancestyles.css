@@ -3,6 +3,9 @@
 }
 
 @media (max-width:640px){
+  *{
+    width: 90%;
+  }
   .first-div{
     margin-top: 300px;
   }
