@@ -5,7 +5,8 @@
   import { times } from './Data/Times';
   import { useState, useEffect } from 'react';
   import { FaArrowDown } from 'react-icons/fa';
-  import logo2 from "../components/Images/logo2.png"
+  import logo2 from "../components/Images/logo2.png";
+  import "../styles/sdistancestyles.css";
 
 
   const AllPaths = () => {
@@ -21,7 +22,7 @@
 
     const [ss, setSs] = useState(false);
 
-    const [blueLine, setBlueLine] = useState(["Raydurg", "Hitech City", "Durgam Cheruvu", "Madhapur", "Peddamma Gudi", "Jubilee Hills Checkpost", "Rd no.5 Jubliee Hills","Yusufguda","Madhuranagar","Begumpet","Prakash Nagar","Rasoolpura ", "Paradise","Secunderabad East", "Mettuguda", "Tarnaka", "Habsiguda", "NGRI", " Stadium", "Uppal", "Nagole"]);
+    const [blueLine, setBlueLine] = useState(["Raydurg", "Hitech City", "Durgam Cheruvu", "Madhapur", "Peddamma Gudi", "Jubilee Hills Checkpost", "Rd no.5 Jubliee Hills","Yusufguda","Madhuranagar","Begumpet","Prakash Nagar","Rasoolpura", "Paradise","Secunderabad East", "Mettuguda", "Tarnaka", "Habsiguda", "NGRI", "Stadium", "Uppal", "Nagole"]);
     const [redLine, setRedLine] = useState(["JNTU College", "KPHB Colony", "Kukatpally", "Dr B.R. Ambedkar Balanagar", "Musapet", "Bharatnagar", "Erragadda", "ESI Hospital", "SR Nagar", "Punjagutta", "Irrum Manjil", "Khairatabad", "Lakdi-ka-pul","Assembly", "Gandhi Bhavan", "Osmania Medical College", "Malakpet", "New Market", "Musarambagh", "Dilsukhnagar", "Chaitanyapuri", "Victoria Mahal", "LB Nagar"]);
     const [greenLine, setGreenLine] = useState(["Secunderabad West", "Gandhi Hospital", "Musheerabad", "RTC X Roads", "Chikkadapally", "Narayanguda", "Sultan Bazar"])
 
@@ -57,6 +58,7 @@
 
     
   function dijkstraAllPathsAlgo(){
+  
     setResult([]);
       const paths = dijkstraAllPaths(graph, cities.indexOf(src), cities.indexOf(dest));
       const s =[];
@@ -122,7 +124,7 @@
       </div>
     </nav>
     <div className="first-div">
-      <p className="title">Get the shortest path here, to reach your destination</p>
+      <center><p className="title">Get the shortest path here, to reach your destination</p></center>
     <div className="start">
     <p id="from">From :</p>
     <select id="src" onChange={e=>setSrc(e.target.value)}>
@@ -251,79 +253,105 @@
       </div>
       </div>
     </div>
-    <button onClick={dijkstraAllPathsAlgo} className='sub'>Get All Paths</button>
+    <center><button onClick={dijkstraAllPathsAlgo} className='sub'>Get All Paths</button></center>
     <br/><br/><br/>
 
-    <h3 className='noofpaths'>Number of Paths : {result.length}</h3>
+    
 
     <div>
+    <center><h3 className='noofpaths'>Possible Paths : {result.length}</h3></center>
     {result.length > 0 && (
+      
       <div className='output-paths'>
+      
         {result.map((path, index) => (
-          <h4 key={index}>
-            Path {index + 1}: {path.map((city, cityIndex) => {
+          <h4 className='output-h4' key={index}>
+            <center className='path-no'>Path {index + 1}:</center> {path.map((city, cityIndex) => {
               if(city==pg){
                 return(
-                  <div>
-                  <React.Fragment key={cityIndex}>
-                    {city}<br/>
-                    {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
-                  </React.Fragment>
-                  </div>
+                  <center>
+                    {cityIndex==0 && blueLine.includes(path[cityIndex+1]) &&<p className='pg-blue'>[Get into blue line]</p>}
+                    {cityIndex==0 && greenLine.includes(path[cityIndex+1]) &&<p className='pg-green'>[Get into green line]</p>}
+                    
+                    <React.Fragment key={cityIndex}>
+                      <p  id="pg-item" className='value-item'>{city}<br/></p>
+                      {blueLine.includes(path[cityIndex-1]) && greenLine.includes(path[cityIndex+1]) &&
+                        <p className='pg-green'>[Change here for green line]</p>}
+                     {blueLine.includes(path[cityIndex+1]) && greenLine.includes(path[cityIndex-1]) &&
+                         <p className='pg-blue'>[Change here for blue line]</p>}
+                      {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
+                    </React.Fragment>
+                  </center>
                 )
               }else if(city==ap){
                 return(
-                  <div>
+                  <center>
+                  {cityIndex==0 && blueLine.includes(path[cityIndex+1]) &&<p className='ap-blue'>[Get into blue line]</p>}
+                    {cityIndex==0 && redLine.includes(path[cityIndex+1]) &&<p className='ap-red'>[Get into red line]</p>}
                   <React.Fragment key={cityIndex}>
-                    {city}<br/>
+                  <p id="ap-item" className='value-item'>{city}<br/></p>
+                  {blueLine.includes(path[cityIndex-1]) && redLine.includes(path[cityIndex+1]) &&
+                    <p className='ap-red'>[Change here for red line]</p>}
+                  {blueLine.includes(path[cityIndex+1]) && redLine.includes(path[cityIndex-1]) &&
+                      <p className='ap-blue'>[Change here for blue line]</p>}
                     {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
                   </React.Fragment>
-                  </div>
+                  
+                  </center>
                 )
               } else if(city==mgbs){
                 return(
-                  <div>
+                  <center>
+                  {cityIndex==0 && redLine.includes(path[cityIndex+1]) &&<p className='mgbs-red'>[Get into red line]</p>}
+                    {cityIndex==0 && greenLine.includes(path[cityIndex+1]) &&<p className='mgbs-green'>[Get into green line]</p>}
                   <React.Fragment key={cityIndex}>
-                    {city}<br/>
+                  <p id="mgbs-item" className='value-item'>{city}<br/></p>
+                    {greenLine.includes(path[cityIndex-1]) && redLine.includes(path[cityIndex+1]) &&
+                      <p className='mgbs-red'>[Change here for red line]</p>}
+                    {greenLine.includes(path[cityIndex+1]) && redLine.includes(path[cityIndex-1]) &&
+                        <p className='mgbs-green'>[Change here for green line]</p>}
                     {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
                   </React.Fragment>
-                  </div>
+                  </center>
                 )
               }
               else if(blueLine.includes(city)){
                 return(
-                  <div>
+                  <center>
+                  {cityIndex==0 &&<p className='pg-blue'>[Get into blue line]</p>}
                   <React.Fragment key={cityIndex}>
-                    {city}<br/>
+                  <p id="b-item" className='value-item'>{city}<br/></p>
                     {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
                   </React.Fragment>
-                  </div>
+                  </center>
                 )
               }else if(redLine.includes(city)){
                 return(
-                  <div>
+                  <center>
+                  {cityIndex==0 &&<p className='ap-red'>[Get into red line]</p>}
                   <React.Fragment key={cityIndex}>
-                    {city}<br/>
+                  <p id="r-item" className='value-item'>{city}<br/></p>
                     {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
                   </React.Fragment>
-                  </div>
+                  </center>
                 )
               } else if(greenLine.includes(city)){
                 return(
-                  <div>
+                  <center>
+                  {cityIndex==0 &&<p className='pg-green'>[Get into green line]</p>}
                   <React.Fragment key={cityIndex}>
-                    {city}<br/>
+                  <p id="g-item" className='value-item'>{city}<br/></p>
                     {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
                   </React.Fragment>
-                  </div>
+                  </center>
                 )
               }
-              <div>
-              <React.Fragment key={cityIndex}>
-                {city}<br/>
-                {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
-              </React.Fragment>
-              </div>
+              // <center>
+              // <React.Fragment key={cityIndex}>
+              // <p id="g-item" className='value-item'>{city}<br/></p>
+              //   {cityIndex !== path.length - 1 && <FaArrowDown className='long-arrow'/>}
+              // </React.Fragment>
+              // </center>
             })}
           </h4>
         ))}

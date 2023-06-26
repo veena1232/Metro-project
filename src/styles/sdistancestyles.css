@@ -9,6 +9,9 @@
   .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
     margin-left: 40px;
   }
+  #src, #dest{
+    width: 100px;
+  }
 }
 
 #src, #dest{
@@ -74,10 +77,13 @@
  }
 
  #g-item{
-    color: green;
-    border: 2px solid green;
-    width: 180px;
-    border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  width: 180px;
+  font-size: 17px;
+  border: 2px solid green;
+  border-radius: 30px;
  }
  #r-item{
     align-items: center;
@@ -89,16 +95,20 @@
     border-radius: 30px;
  }
  #b-item{
-    color: blue;
-    border: 2px solid blue;
-    width: 180px;
-    border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  width: 180px;
+  font-size: 17px;
+  border: 2px solid blue;
+  border-radius: 30px;
  }
 
  #pg-item{
    padding-top: 7px;
    color: white;
-   height: 35px;
+   height: 25px;
+   font-size: 19px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
@@ -106,15 +116,17 @@
  #mgbs-item{
    padding-top: 7px;
     color: white;
-    height: 35px;
+    height: 25px;
+    font-size: 19px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
  }
  #ap-item{
-   padding-top: 7px;
+   padding-top: 3px;
    color: white;
-   height: 35px;
+   height: 25px;
+   font-size: 19px;
     background-color: rgb(14, 12, 12);
     width: 180px;
     border-radius: 30px;
@@ -150,7 +162,6 @@
 
   .pg-green, .pg-blue, .ap-blue, .ap-red, .mgbs-green, .mgbs-red{
    font-size: 17px;
-   margin-left: 80px;
   }
 
   .pg-green{
@@ -173,4 +184,25 @@
   }
   .sdc{
     color: green;
+  }
+
+  .output-paths{
+    display: flex;
+    justify-content: center;
+  }
+  .output-h4{
+    padding: 70px;
+  }
+
+  .path-no{
+    color: #0081AB;
+    padding: 20px;
+  }
+
+  .noofpaths{
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    color: white;
+    background-color:coral;
   }

@@ -98,7 +98,7 @@ const PlatformDetails = () => {
     </div>
   </nav>
   <div className='select'>
-    <select id="src" onChange={e=>setSrc(e.target.value)}>
+    <center><select id="src" onChange={e=>setSrc(e.target.value)}>
         <option>Ameerpet</option>
         <option>Assembly</option>
         <option>Begumpet</option>
@@ -156,13 +156,13 @@ const PlatformDetails = () => {
         <option>Uppal</option>
         <option>Victoria Mahal</option>
         <option>Yusufguda</option>
-      </select>
+      </select></center>
       <br/><br/>
-      <h4 id="p11">Platform 1: </h4><h4 id="p1"></h4>
-      <h4 id="p12">Platform 2: </h4><h4 id="p2"></h4>
+      <center><label id="p11">Platform 1: </label><h4 id="p1"></h4></center>
+      <center><label id="p12">Platform 2: </label><h4 id="p2"></h4></center>
       
-      <br/><br/><br/>
-      <button onClick={getPF}>GETPF</button>
+      <br/>
+      <center><button className='sub' onClick={getPF}>GET PLATFORMS</button></center>
     </div>
     </div>
   )
