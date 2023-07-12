@@ -104,20 +104,13 @@ const ShortDistance = () => {
         setSs(false)
         dijkstra(graph, cities.indexOf(src), cities.indexOf(dest));
       }
-      
-      
-
-
-
-
-
 
   return (
     <div className="main-div">
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div className="container-fluid">
       <a className="navbar-brand" href="/">
-        <img src={logo2} className="food-munch-logo" alt="Logo" />
+        <img src={logo2} className="food-munch-logo" alt="Logo" width={70} height={70}/>
       </a>
       <h3 id="title">Go Metro, Explore Extra</h3>
       <button
