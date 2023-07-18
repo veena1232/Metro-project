@@ -166,52 +166,23 @@ const STime = () => {
 
 
   return (
-    <div className='main-div'>
-
+    <div className="main-div">
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="/">
-        <img src={logo2} className="food-munch-logo" alt="Logo" />
-      </a>
-      <h3 id="title">Go Metro, Explore Extra</h3>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="nav-menu">
-          <div className="navbar-nav ml-auto">
-            <a className="nav-link active" id="navItem1" href="#wcuSection">
-              About
-              <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-link" href="#exploreMenuSection" id="navItem2">
-              Contact
-            </a>
-            <a className="nav-link" href="#deliveryPaymentSection" id="navItem3">
-              Services
-            </a>
-            <a className="nav-link" href="#followUsSection" id="navItem4">
-              Follow Us
-            </a>
-          </div>
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <img src={logo2} alt="Logo" width={50} height={50} />
+          </a>
+          <h3 id="title" className="col-8 col-md-7">Go Metro</h3>
+          
         </div>
-      </div>
-    </div>
-  </nav>
-
-    <div className="first-div">
-    <center><p className="title">Know the timings, coz time is most valuable thing in world</p></center>
-  <div className="start">
-  <p id="from">From :</p>
-  <select id="src" onChange={e=>setSrc(e.target.value)}>
+      </nav>
+  <div className='content-div'>
+  <div className="first-div">
+  <center><p className="title">Time is most important thing in this world</p></center>
+  <center className="start">
+  <p id="from" className=''>From :</p>
+  <select id="src" className='' onChange={e=>setSrc(e.target.value)}>
+    <option>Select source station</option>
     <option>Ameerpet</option>
     <option>Assembly</option>
     <option>Begumpet</option>
@@ -270,12 +241,13 @@ const STime = () => {
     <option>Victoria Mahal</option>
     <option>Yusufguda</option>
   </select>
-  </div>
+  </center>
   
-  <div className='end'>
+  <center className='end'>
   <p id="to">To :</p>
   <div id="to-id">
   <select id="dest" onChange={e=>{setDest(e.target.value)}}>
+  <option>Select destination station</option>
     <option>Ameerpet</option>
     <option>Assembly</option>
     <option>Begumpet</option>
@@ -335,16 +307,14 @@ const STime = () => {
     <option>Yusufguda</option>
     </select>
     </div>
-        
-        
-        </div>
-        
-        </div>
+    </center>
+  </div>
+  </div>
 
   <center><button onClick={dijkstraTimesAlgo} className='sub'>Get minimum time</button></center>
   <br/><br/><br/>
 
-  {isClicked&&<center><h1 className='final-time'>It just takes : {d} minutes</h1></center>}
+  {isClicked&&<center><h1 className='final-time'>{d} minutes</h1></center>}
   {ss?<center><h3 className='same-station-msg'>Source and Destination can't be same</h3></center>:<p></p>}
     
   <br/><br/><br/>

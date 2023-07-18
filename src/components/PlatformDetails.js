@@ -13,6 +13,8 @@ const PlatformDetails = () => {
 
   const [src, setSrc] = useState("Ameerpet");
 
+  const [click, setClick] = useState(false);
+
   function getPF(){
     let k = cities.indexOf(src);
     if(k==0){
@@ -59,46 +61,19 @@ const PlatformDetails = () => {
 
   return (
     <div className='main-div'>
-    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="/">
-        <img src={logo2} className="food-munch-logo" alt="Logo" />
-      </a>
-      <h3 id="title">Go Metro, Explore Extra</h3>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="nav-menu">
-          <div className="navbar-nav ml-auto">
-            <a className="nav-link active" id="navItem1" href="#wcuSection">
-              About
-              <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-link" href="#exploreMenuSection" id="navItem2">
-              Contact
-            </a>
-            <a className="nav-link" href="#deliveryPaymentSection" id="navItem3">
-              Services
-            </a>
-            <a className="nav-link" href="#followUsSection" id="navItem4">
-              Follow Us
-            </a>
-          </div>
-        </div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">
+          <img src={logo2} className="food-munch-logo" alt="Logo" width={50} height={50}/>
+        </a>
+        <h3 id="title" className="col-8 col-md-7">Go Metro</h3>
       </div>
-    </div>
-  </nav>
+      </nav>  
+  
   <div className='select'>
+  <center><p className="title">Don't get confused!</p></center>
     <center><select id="src" onChange={e=>setSrc(e.target.value)}>
+      <option>Select source station</option>
         <option>Ameerpet</option>
         <option>Assembly</option>
         <option>Begumpet</option>
@@ -158,11 +133,12 @@ const PlatformDetails = () => {
         <option>Yusufguda</option>
       </select></center>
       <br/><br/>
-      <center><label id="p11">Platform 1: </label><h4 id="p1"></h4></center>
-      <center><label id="p12">Platform 2: </label><h4 id="p2"></h4></center>
       
-      <br/>
-      <center><button className='sub' onClick={getPF}>GET PLATFORMS</button></center>
+      <center><button className='sub' style={{marginLeft:0}} onClick={getPF}>Get platforms</button></center>
+      <div className='platform-info'>
+        <center><label id="p11">Platform 1: </label><h4 id="p1"></h4></center>
+        <center><label id="p12">Platform 2: </label><h4 id="p2"></h4></center>
+      </div>
     </div>
     </div>
   )

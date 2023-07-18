@@ -32,7 +32,7 @@ const Home = () => {
           <a className="navbar-brand" href="/">
             <img src={logo2} alt="Logo" width={50} height={50} />
           </a>
-          <h3 id="title" className="col-5">Go Metro</h3>
+          <h3 id="title" className="col-4 col-md-3">Go Metro</h3>
 
           <button
             className="navbar-toggler"

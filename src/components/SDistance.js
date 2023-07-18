@@ -108,48 +108,21 @@ const ShortDistance = () => {
   return (
     <div className="main-div">
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="/">
-        <img src={logo2} className="food-munch-logo" alt="Logo" width={70} height={70}/>
-      </a>
-      <h3 id="title">Go Metro, Explore Extra</h3>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="nav-menu">
-          <div className="navbar-nav ml-auto">
-            <a className="nav-link active" id="navItem1" href="/about">
-              About
-              <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-link" href="contact" id="navItem2">
-              Contact
-            </a>
-            <a className="nav-link" href="services" id="navItem3">
-              Services
-            </a>
-            <a className="nav-link" href="followus" id="navItem4">
-              Follow Us
-            </a>
-          </div>
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <img src={logo2} alt="Logo" width={50} height={50} />
+          </a>
+          <h3 id="title" className="col-8 col-md-7">Go Metro</h3>
+          
         </div>
-      </div>
-    </div>
-  </nav>
+      </nav>
+  <div className='content-div'>
   <div className="first-div">
-    <center><p className="title">Get the shortest path here, to reach your destination</p></center>
-  <div className="start">
-  <p id="from">From :</p>
+  <center><p className="title">Get the shortest path here, to reach your destination</p></center>
+  <center className="start">
+  <p id="from" className=''>From :</p>
   <select id="src" className='' onChange={e=>setSrc(e.target.value)}>
+    <option>Select source station</option>
     <option>Ameerpet</option>
     <option>Assembly</option>
     <option>Begumpet</option>
@@ -208,12 +181,13 @@ const ShortDistance = () => {
     <option>Victoria Mahal</option>
     <option>Yusufguda</option>
   </select>
-  </div>
+  </center>
   
-  <div className='end'>
+  <center className='end'>
   <p id="to">To :</p>
   <div id="to-id">
   <select id="dest" onChange={e=>{setDest(e.target.value)}}>
+    <option>Select destination station</option>
     <option>Ameerpet</option>
     <option>Assembly</option>
     <option>Begumpet</option>
@@ -273,7 +247,8 @@ const ShortDistance = () => {
     <option>Yusufguda</option>
     </select>
     </div>
-    </div>
+    </center>
+  </div>
   </div>
         <center><button onClick={dijkstraAlgo} className="sub">Get shortest path</button></center>
 
