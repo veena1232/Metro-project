@@ -4,7 +4,6 @@
 }
 
 .header{
-    padding: 0;
     display: flex;
     background-image:linear-gradient(#0730fa,#0795fa) ;
     font-size: 20px;    
@@ -37,6 +36,7 @@ ul li Link{
 
 #navItem1 , #navItem2, #navItem3, #navItem4, #navItem5 {
     color: white;
+    margin-right: 10px;
 }
 
 #navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover{
@@ -59,10 +59,11 @@ a{
     color:antiquewhite;
 }
 #title{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .nav-menu{
+    margin-left: 400px;
 }
 
 .card{
@@ -72,6 +73,7 @@ a{
 
 .menu {
   }
+
 .main-nav{
     background-color: white;
 }
@@ -125,7 +127,7 @@ a{
     border-radius: 5px;
     border: 2px solid white;
     font-size: 17px;
-    padding:5px;
+    margin-left: 40px;
  }
 
  .login-btn:hover{
@@ -133,7 +135,6 @@ a{
  }
 
  .username{
-    
     font-size: 20px;
  }
 
@@ -154,6 +155,7 @@ a{
     width: 25px;
     color: whitesmoke;
     height: 35px;
+    margin: 30px;
  }
 
 .cr-div{
@@ -197,3 +199,50 @@ hr{
     justify-content: center;
     align-items: center;
 }
+
+
+/* Default styles */
+
+/* ... existing styles ... */
+
+/* Media queries for small screens */
+
+/* Adjust the navbar height and font size */
+@media screen and (max-width: 767px) {
+    .navbar {
+      height: 60px;
+    }
+  
+    #title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Adjust the menu button layout */
+  @media screen and (max-width: 575px) {
+    .menu .main-nav .col-md-3 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Adjust the footer layout */
+  @media screen and (max-width: 767px) {
+    .footer-div {
+      padding: 10px 0;
+    }
+    
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .contact-icons svg {
+      margin: 0 5px;
+    }
+
+    .icon-1{
+        margin-right: 50px;
+    }
+  }
+  
