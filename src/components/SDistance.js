@@ -112,7 +112,7 @@ const ShortDistance = () => {
           <a className="navbar-brand" href="/">
             <img src={logo2} alt="Logo" width={50} height={50} />
           </a>
-          <h3 id="title" className="col-8 col-md-7">Go Metro</h3>
+          <h3 id="title" className="col-8 col-md-3">Y<span className="title-span">our</span> Metro</h3>
           
         </div>
       </nav>
@@ -316,31 +316,37 @@ const ShortDistance = () => {
               } else if(blueLine.includes(value)){
                 return (
                   <div key={index}>
+                  <center>
                   {index==0 &&<p className='pg-blue'>[Get into blue line]</p>}
                     <li>
                       <p id="b-item" className='value-item'>{value}</p>
                     </li>
                     {index!==path.length-1 &&<FaArrowDown className="arrow-icon-blue"/>}
+                  </center>
                   </div>
                 );
               } else if(redLine.includes(value)){
                 return (
                   <div key={index}>
+                  <center>
                   {index==0 &&<p className='ap-red'>[Get into red line]</p>}
                     <li>
                       <p id="r-item" className='value-item'>{value}</p>
                     </li>
                     {index!==path.length-1 &&<FaArrowDown className="arrow-icon-red"/>}
+                  </center>
                   </div>
                 );
               } else if(greenLine.includes(value)){
                 return (
                   <div key={index}>
+                  <center>
                   {index==0 &&<p className='pg-green'>[Get into green line]</p>}
                     <li>
                       <p id="g-item" className='value-item'>{value}</p>
                     </li>
                     {index!==path.length-1 &&<FaArrowDown className="arrow-icon-green"/>}
+                  </center>
                   </div>
                 );
               }

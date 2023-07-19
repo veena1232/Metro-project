@@ -1,3 +1,9 @@
+/* .main-div{
+  background-image: url("https://media.istockphoto.com/id/1184398225/photo/growing-asian-cities-night-view-of-pune-city-in-india-during-diwali-festival.webp?b=1&s=170667a&w=0&k=20&c=UrsGohVefEto26BUObNs93ppDrmp1JfoI-P4XLNMddg=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 .first-div{
     margin-top: 140px;
 }
@@ -44,6 +50,42 @@
 }
 
 @media (max-width:640px){
+
+  .icon-1, .icon-2, .icon-3,.icon-4{
+    width: 35px;
+    color: whitesmoke;
+    height: 35px;
+    margin: 50px;
+    cursor: pointer;
+ }
+
+  #navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
+    width: 30px;
+    background-color: red;
+    border-radius: 40px;
+    font-size: 18px;
+  }
+
+  #navItem1 , #navItem2, #navItem3, #navItem4, #navItem5{
+    margin-left: 220px;
+    color: #fff;
+  }
+  .login-btn{
+    width: 70px;
+    height: 35px;
+    background-color: #0081AB;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 17px;
+    margin-left: 220px;
+    margin-top: 20px;
+   }
+  #navbarNavAltMarkup{
+    height: 250px;
+    border-radius: 10px;
+  }
+
   #p11, #p12{
     padding-top: 10px;
     height: 40px;
@@ -62,9 +104,6 @@
     width: 250px;
   }
 
-  .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
-    margin-left: 40px;
-  }
 
   #src, #dest{
     width: 100px;

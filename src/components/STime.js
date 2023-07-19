@@ -172,7 +172,7 @@ const STime = () => {
           <a className="navbar-brand" href="/">
             <img src={logo2} alt="Logo" width={50} height={50} />
           </a>
-          <h3 id="title" className="col-8 col-md-7">Go Metro</h3>
+          <h3 id="title" className="col-8 col-md-3">Y<span className="title-span">our</span> Metro</h3>
           
         </div>
       </nav>

@@ -32,7 +32,7 @@ const Home = () => {
           <a className="navbar-brand" href="/">
             <img src={logo2} alt="Logo" width={50} height={50} />
           </a>
-          <h3 id="title" className="col-4 col-md-3">Go Metro</h3>
+          <h3 id="title" className="col-5 col-md-3">Y<span className="title-span">our</span> Metro</h3>
 
           <button
             className="navbar-toggler"
@@ -48,11 +48,11 @@ const Home = () => {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="nav-menu">
               <div className="navbar-nav ml-auto">
-                <a className="nav-link active" id="navItem1" href="#wcuSection">
+                <a className="nav-link active col-md-2" id="navItem1" href="#wcuSection">
                   About
                   <span className="sr-only">(current)</span>
                 </a>
-                <a className="nav-link" href="#exploreMenuSection" id="navItem2">
+                <a className="nav-link col-md-2" href="#exploreMenuSection" id="navItem2">
                   Contact
                 </a>
                 <a className="nav-link" href="#deliveryPaymentSection" id="navItem3">

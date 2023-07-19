@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
+#title{
+  margin-top: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+@media (min-width:600px) {
+  .contact-head{
+    margin-top: 20px;
+  }
+  #navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover{
+    font-weight: bold;
+}
+
+#navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
+    background-color: #4951b5;
+    border-radius: 40px;
+}
+  .nav-menu{
+    margin-left: 300px;
+}
+
+
+#navItem1 , #navItem2, #navItem3, #navItem4, #navItem5{
+  margin-left: 30px;
+  color: #fff;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 3px;
+}
+
+.login-btn{
+  width: 70px;
+  height: 35px;
+  background-color: #0081AB;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 17px;
+  margin-left: 40px;
+}
+}
+
+.title-span{
+  color: #D31027;
+  font-family: 'Lobster Two', cursive;
+}
+
 #logo{
     width: 10px;
     height: 10px;
@@ -34,21 +86,7 @@ ul li Link{
     justify-content: end;
 }
 
-#navItem1 , #navItem2, #navItem3, #navItem4, #navItem5 {
-    color: white;
-    margin-right: 10px;
-}
 
-#navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover{
-    color: black;
-    background-color: antiquewhite;
-    border-radius: 40px;
-}
-
-#navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
-    background-color: #4951b5;
-    border-radius: 40px;
-}
 
 .container-fluid{
     background-color: rgba(8, 112, 19, 0.735);
@@ -57,13 +95,6 @@ ul li Link{
 
 a{
     color:antiquewhite;
-}
-#title{
-    margin-top: 10px;
-}
-
-.nav-menu{
-    margin-left: 400px;
 }
 
 .card{
@@ -119,16 +150,7 @@ a{
     background-color: #DA2C43;
  }
 
- .login-btn{
-    width: 70px;
-    height: 35px;
-    background-color: #0081AB;
-    color: white;
-    border-radius: 5px;
-    border: 2px solid white;
-    font-size: 17px;
-    margin-left: 40px;
- }
+ 
 
  .login-btn:hover{
     background-color: #DA2C43;
@@ -156,6 +178,8 @@ a{
     color: whitesmoke;
     height: 35px;
     margin: 30px;
+    margin-top: 10px;
+    cursor: pointer;
  }
 
 .cr-div{
@@ -246,3 +270,6 @@ hr{
     }
   }
   
+  .contact-head{
+    color: #fff;
+  }
