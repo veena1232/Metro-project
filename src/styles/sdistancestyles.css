@@ -60,7 +60,6 @@
  }
 
   #navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
-    width: 30px;
     background-color: red;
     border-radius: 40px;
     font-size: 18px;

@@ -172,13 +172,13 @@ const STime = () => {
           <a className="navbar-brand" href="/">
             <img src={logo2} alt="Logo" width={50} height={50} />
           </a>
-          <h3 id="title" className="col-8 col-md-3">Y<span className="title-span">our</span> Metro</h3>
+          <h3 id="title" className="col-8 col-md-12">Y<span className="title-span">our</span> Metro</h3>
           
         </div>
       </nav>
   <div className='content-div'>
   <div className="first-div">
-  <center><p className="title">Time is most important thing in this world</p></center>
+  <center><p className="title"><marquee>Time is most important thing in this world</marquee></p></center>
   <center className="start">
   <p id="from" className=''>From :</p>
   <select id="src" className='' onChange={e=>setSrc(e.target.value)}>
