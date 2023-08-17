@@ -102,7 +102,7 @@ export default function Raydurg(){
 
     <div className='row mt-20'>
       <div className='col-2 ml-20'><img src={msp} alt='ikea' width={220} height={170}></img></div>
-      <div className='col-9 bg-red'>
+      <div className='col-9 bg-redgit'>
         <div className='row'>
           <div className='col-1 mt-3'>
           <FaMapMarkerAlt  size={30} color=""/>           

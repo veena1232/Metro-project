@@ -1,9 +1,0 @@
-.same-station-msg, .final-time{
-    color:green;
-}
-
-@media (max-width:640px){
-    .final-time{
-        width: 350px;
-    }
-}
