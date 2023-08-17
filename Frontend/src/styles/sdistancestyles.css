@@ -1,0 +1,320 @@
+/* .main-div{
+  background-image: url("https://media.istockphoto.com/id/1184398225/photo/growing-asian-cities-night-view-of-pune-city-in-india-during-diwali-festival.webp?b=1&s=170667a&w=0&k=20&c=UrsGohVefEto26BUObNs93ppDrmp1JfoI-P4XLNMddg=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.mr-0{
+  margin-left: 800px;
+  margin-bottom: 100px;
+}
+.first-div{
+    margin-top: 140px;
+}
+
+@media (min-width:640px) {
+  #p11, #p12{
+    padding-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    width: 600px;
+    background-color: #0081AB;
+    color: #fff;
+  }
+  #p12{
+    margin-top: 30px;
+  }
+  
+  #p1, #p2{
+    margin: 0;
+    padding: 0;
+    width: 600px;
+  }
+  .sub{
+    margin-left: 40px;
+  }
+
+  .output-paths{
+    display: flex;
+  }
+  .start{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .end{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  #to-id{
+    margin-left:40px;
+  }
+
+}
+
+@media (max-width:640px){
+
+  .icon-1, .icon-2, .icon-3,.icon-4{
+    width: 35px;
+    color: whitesmoke;
+    height: 35px;
+    margin: 50px;
+    cursor: pointer;
+ }
+
+  #navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
+    font-size: 18px;
+  }
+
+  #navItem1 , #navItem2, #navItem3, #navItem4, #navItem5{
+    margin-left: 220px;
+    color: #fff;
+  }
+  .login-btn{
+    width: 70px;
+    height: 35px;
+    background-color: #0081AB;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 17px;
+    margin-left: 220px;
+    margin-top: 20px;
+   }
+  #navbarNavAltMarkup{
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  #p11, #p12{
+    padding-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #0081AB;
+    color: #fff;
+  }
+  #p12{
+    margin-top: 30px;
+  }
+  
+  #p1, #p2{
+    margin: 0;
+    padding: 0;
+    width: 250px;
+  }
+
+
+  #src, #dest{
+    width: 100px;
+  }
+
+  .title{
+    width: 280px;
+  }
+
+  .start{
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  #src, #dest {
+    color: blue;
+    padding: 10px;
+    height: 45px;
+    width: 100px;
+    font-size: large;
+    border: 2px solid blue;
+    border-radius: 10px;
+  }
+
+  .end{
+    margin-top: 30px;
+  }
+}
+
+#src, #dest{
+    color: blue;
+    padding: 10px;
+    height: 45px;
+    width: 300px;
+    font-size: large;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+
+#from, #to{
+    font-size: large;
+    margin-top: 10px;
+    color: #0081AB;
+}
+#from{
+    margin-right: 20px;
+}
+#to{
+}
+
+.sub{
+    border: 2px solid wheat;
+    height: 40px;
+    width: 250px;
+    margin-top: 27px;
+    background-color: #0081AB;
+    color:antiquewhite;
+    font-size: larger;
+    border-radius: 40px;
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ .sub:hover{
+    height: 45px;
+    width: 253px;
+    background-color: #DA2C43    ;
+    color:antiquewhite;
+    font-size: larger;
+    border-radius: 40px;
+    transition-duration: 0.2s;
+    box-shadow: 0px 6px 6px 0#0081AB
+    , 0 5px 5px 0 #0081AB
+    ;
+ }
+
+ #g-item{
+  align-items: center;
+  justify-content: center;
+  color: green;
+  width: 180px;
+  font-size: 17px;
+  border: 2px solid green;
+  border-radius: 30px;
+ }
+ #r-item{
+    align-items: center;
+    justify-content: center;
+    color: red;
+    width: 180px;
+    font-size: 17px;
+    border: 2px solid red;
+    border-radius: 30px;
+ }
+ #b-item{
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  width: 180px;
+  font-size: 17px;
+  border: 2px solid blue;
+  border-radius: 30px;
+ }
+
+ #pg-item{
+   color: white;
+   height: 25px;
+   font-size: 19px;
+    background-color: rgb(14, 12, 12);
+    width: 180px;
+    border-radius: 30px;
+ }
+ #mgbs-item{
+    color: white;
+    height: 25px;
+    font-size: 19px;
+    background-color: rgb(14, 12, 12);
+    width: 180px;
+    border-radius: 30px;
+ }
+ #ap-item{
+   color: white;
+   height: 25px;
+   font-size: 19px;
+    background-color: rgb(14, 12, 12);
+    width: 180px;
+    border-radius: 30px;
+ }
+
+ .output{
+    align-items: center;
+ }
+
+ .arrow-icon-ap,.arrow-icon-mgbs, .arrow-icon-pg {
+    color: rgb(11, 10, 10); 
+  }
+
+  .arrow-icon-blue{
+    color: blue;
+  }
+  .arrow-icon-red{
+    color: red;
+  }
+  .arrow-icon-green{
+    color: green;
+  }
+
+  .title{
+    color: #DA2C43;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .pg-green, .pg-blue, .ap-blue, .ap-red, .mgbs-green, .mgbs-red{
+   font-size: 17px;
+  }
+
+  .pg-green{
+   color: green;
+  }
+  .pg-blue{
+   color: blue;
+  }
+  .ap-red{
+   color: red;
+  }
+  .ap-blue{
+   color: blue;
+  }
+  .mgbs-green{
+   color: green;
+  }
+  .mgbs-red{
+   color: red;
+  }
+  .sdc{
+    color: green;
+  }
+
+  .output-paths{
+    justify-content: center;
+  }
+  .output-h4{
+    padding: 70px;
+  }
+
+  .path-no{
+    color: #0081AB;
+    padding: 20px;
+  }
+
+  .noofpaths{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: #0081AB;
+    color: white;
+    
+  }
+
+  .content-div{
+    
+  }
+
+  .platform-info{
+    margin-top: 50px;
+  }
+
+
+.p-c{
+  margin-bottom: 40px;
+}

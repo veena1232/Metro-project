@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
+#title{
+  margin-top: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+@media (min-width:600px) {
+  .contact-head{
+    margin-top: 20px;
+  }
+  #navItem1:hover, #navItem2:hover, #navItem3:hover, #navItem4:hover{
+    font-weight: bold;
+}
+
+#navItem1:active, #navItem2:active, #navItem3:active, #navItem4:active{
+    background-color: #4951b5;
+    border-radius: 40px;
+}
+  .nav-menu{
+    margin-left: 300px;
+}
+
+
+#navItem1 , #navItem2, #navItem3, #navItem4, #navItem5{
+  margin-left: 30px;
+  color: #fff;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 3px;
+}
+
+.login-btn{
+  width: 70px;
+  height: 35px;
+  background-color: #0081AB;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid white;
+  font-size: 17px;
+  margin-left: 40px;
+}
+}
+
+.title-span{
+  color: #D31027;
+  font-family: 'Lobster Two', cursive;
+}
+
+#logo{
+    width: 10px;
+    height: 10px;
+}
+
+.header{
+    display: flex;
+    background-image:linear-gradient(#0730fa,#0795fa) ;
+    font-size: 20px;    
+}
+
+.logo-title{
+    text-align: center;
+    font-size: 24px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul li Link{
+    color: black;
+}
+
+#nav-item{
+    text-decoration: none;
+    color:white;
+
+}
+
+.nav ul{
+    display: flex;
+    margin-left: 400px;
+    justify-content: end;
+}
+
+
+
+.container-fluid{
+    background-color: rgba(8, 112, 19, 0.735);
+    color: #fff;
+}
+
+a{
+    color:antiquewhite;
+}
+
+.card{
+    height: 300px;
+    width: 500px;
+}
+
+.menu {
+  }
+
+.main-nav{
+    background-color: white;
+}
+ 
+  
+ #btn1, #btn2, #btn3, #btn4{
+    align-items: center;
+    border: 1.5px solid #fff;
+    height: 50px;
+    width: 300px;
+    background-color: #0081AB;
+    color: #fff;
+    font-size: larger;
+    border-radius: 30px;
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover{
+    height: 52px;
+    width: 302px;
+    background-color: #DA2C43    ;
+    color:antiquewhite;
+    font-size: larger;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+    box-shadow: 0px 6px 6px 0#0081AB
+    , 0 5px 5px 0 #0081AB
+    ;
+ }
+
+ .logout-btn{
+    width: 70px;
+    height: 35px;
+    background-color: #0081AB;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 17px;
+    padding:5px;
+ }
+
+ .logout-btn:hover{
+    background-color: #DA2C43;
+ }
+
+ 
+
+ .login-btn:hover{
+    background-color: #DA2C43;
+ }
+
+ .username{
+    font-size: 20px;
+ }
+
+ .log-div{
+    display: flex;
+ }
+
+ .main-footer-div{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 218px;
+    background-color: rgba(8, 112, 19, 0.735);
+ }
+ 
+
+ .icon-1, .icon-2, .icon-3,.icon-4{
+    width: 25px;
+    color: whitesmoke;
+    height: 35px;
+    margin: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+ }
+
+.cr-div{
+    color: whitesmoke;
+}
+
+hr{
+    display: block;
+    color: white;
+}
+
+         
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%);
+    margin: 10px;
+    padding: 15px 75px;
+    border:none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+.bg-green{
+    background-color: green;
+}
+
+.menu{
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Default styles */
+
+/* ... existing styles ... */
+
+/* Media queries for small screens */
+
+/* Adjust the navbar height and font size */
+@media screen and (max-width: 767px) {
+    .navbar {
+      height: 60px;
+    }
+  
+    #title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Adjust the menu button layout */
+  @media screen and (max-width: 575px) {
+    .menu .main-nav .col-md-3 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Adjust the footer layout */
+  @media screen and (max-width: 767px) {
+    .footer-div {
+      padding: 10px 0;
+    }
+    
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .contact-icons svg {
+      margin: 0 5px;
+    }
+
+    .icon-1{
+        margin-right: 50px;
+    }
+  }
+  
+  .contact-head{
+    color: #fff;
+  }
