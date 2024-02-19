@@ -10,12 +10,19 @@ import Signup from './Signup';
 import Sample from './Sample';
 import Nearby from './Nearby';
 import Raydurg from './Raydurg';
-
+import About from './About';
+import Contact from './Contact';
+import Services from './Services';
+import Map from './Map'
 const Main = () => {
   return (
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/contact" element={<Contact/>}></Route>
+            <Route path="/services" element={<Services/>}></Route>
+            <Route path="/map" element={<Map/>}></Route>
             <Route path="/stime" element={<STime/>}></Route>
             <Route path="/sdistance" element={<ShortDistance/>}></Route>
             <Route path="/allpaths" element={<AllPaths/>}></Route>

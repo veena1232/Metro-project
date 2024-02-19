@@ -37,3 +37,16 @@
 .br-5{
   border-radius: 10px;
 }
+
+.font-weight-20{
+  font-weight: 40px;
+}
+
+.mt-40{
+  margin-top: 70px;
+}
+
+.nav-click{
+  cursor: pointer;
+  color: rgb(196, 10, 10);
+}

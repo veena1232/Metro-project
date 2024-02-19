@@ -46,18 +46,18 @@ const Home = () => {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="nav-menu">
               <div className="navbar-nav ml-auto">
-                <a className="nav-link active col-md-2" id="navItem1" href="#wcuSection">
+                <a className="nav-link active col-md-2" id="navItem1" href="/about">
                   About
                   <span className="sr-only">(current)</span>
                 </a>
-                <a className="nav-link col-md-2" href="#exploreMenuSection" id="navItem2">
+                <a className="nav-link col-md-2" href="contact" id="navItem2">
                   Contact
                 </a>
-                <a className="nav-link" href="#deliveryPaymentSection" id="navItem3">
+                <a className="nav-link" href="/services" id="navItem3">
                   Services
                 </a>
-                <a className="nav-link" href="#followUsSection" id="navItem4">
-                  FollowUs
+                <a className="nav-link" href="/map" id="navItem4">
+                  Map
                 </a>
 
               </div>

@@ -6,12 +6,16 @@ import { useState, useEffect } from 'react';
 import "../styles/sdistancestyles.css";
 import { FaArrowDown } from 'react-icons/fa';
 import logo2 from "../components/Images/logo2.png"
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Raydurg from './Raydurg';
 
 
 const ShortDistance = () => {
   const [src, setSrc] = useState("Ameerpet");
   const [dest, setDest] = useState("Ameerpet");
   const [path, setPath] = useState([]);
+
+const [clicked, setClicked] = useState(false);
 
   const [pg, setPg] = useState("Parade Ground");
   const [ap, setAp] = useState("Ameerpet");
@@ -25,6 +29,7 @@ const ShortDistance = () => {
  
 
     function dijkstra(graph, src, dest) {
+      setClicked(true);
         const V = graph.length;
         const dist = new Array(V).fill(Number.MAX_VALUE);
         const prev = new Array(V).fill(-1);
@@ -93,7 +98,6 @@ const ShortDistance = () => {
         
       }
                       
-      
       const dijkstraAlgo=()=>{
         console.log(src)
         console.log(blueLine.includes("Rasoolpura"))
@@ -357,7 +361,15 @@ const ShortDistance = () => {
           <p> </p>
         )}
         {ss?<center><h3 className="sdc">Source and Destination can't be same</h3></center>:<p></p>}
-        <a href='/raydurg' className='mr-0'>Click here to more know about your destination</a>
+        
+        {clicked?<Link to="/raydurg" className="mr-0">
+          Click here to know more about your destination
+        </Link>:<p></p>}
+
+          {/* <Router><Route path="/raydurg">
+        <Raydurg data="This is the data you want to pass" />
+      </Route></Router> */}
+        
         </div>
   )
 }
